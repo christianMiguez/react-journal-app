@@ -108,7 +108,9 @@ export const startUploading = (file) => {
 export const startDeleting = (id) => {
 	return async(dispatch, getState) => {
 		const uid = getState().auth.uid;
-		await deleteDoc(doc(db, `${uid}/journal/notes/${id}`));
+		await deleteDoc(doc(db, `${uid}/journal/notes/${id}`)).then(() => {
+			Swal.fire('Borrado', 'elemento borrado exitosamente', 'success')
+		})
 
 		dispatch(deleteNote(id))
 	} 

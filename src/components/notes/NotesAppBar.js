@@ -23,7 +23,7 @@ export const NotesAppBar = () => {
 	}
 	
     return (
-        <div className="notes__appbar">
+        <div className="notes__appbar animate__animated animate__fadeIn animate__faster">
             <span>28 de agosto 2020</span>
 
 			<input type="file" style={{ display: 'none'}} onChange={handleFileChange} id="fileSelector" name="file"/>
