@@ -7,12 +7,14 @@ import { GoogleAuthProvider } from 'firebase/auth';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBwKuGQ0SwfaGvRrRF2anyB-ZO8gbSsihs",
-  authDomain: "journalapp-aa6a7.firebaseapp.com",
-  projectId: "journalapp-aa6a7",
-  storageBucket: "journalapp-aa6a7.appspot.com",
-  messagingSenderId: "857802182000",
-  appId: "1:857802182000:web:e9d2adbcb9a91dab8053b5"
+	
+	// GET FROM FIREBASE
+	  apiKey: "",
+	  authDomain: "",
+	  projectId: "",
+	  storageBucket: "",
+	  messagingSenderId: "",
+	  appId: ""
 };
 
 // Initialize Firebase
