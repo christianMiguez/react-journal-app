@@ -5,8 +5,10 @@ import {startLoading, stopLoading} from './ui';
 import Swal from 'sweetalert2'
 import { noteLogout } from './notes';
 
+// aqui lo que se hace es que se crea una funcion que recibe una accion
 export const startLoginEmailPassword = (email, password) =>{
     return (dispatch) => {
+		// se dispara el loading en el ui 
 		dispatch(startLoading())
 		const auth = getAuth();
 		signInWithEmailAndPassword(auth, email, password)
@@ -51,7 +53,7 @@ export const startGoogleLogin = () =>{
             });
     }
 }
-
+// aqui se crea la funcion que se dispara cuando el usuario se loguea, especificado en el types. solo necesita un parametro que es el uid del usuario y el nombre del usuario 
 export const login = (uid, displayName) => ({
 	type: types.login,
 	payload: {
@@ -75,5 +77,6 @@ export const startLogout = () => {
 }
 
 export const logout = () => ({
+	// el type es el que se dispara en el reducer y el payload es lo que se envia al reducer 
 	type: types.logout
 })
